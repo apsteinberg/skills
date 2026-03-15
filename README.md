@@ -77,6 +77,12 @@ Location: `skills/publish-to-google-docs/`
 
 Quickly publish markdown notes to styled Google Docs using pandoc and a Word template. Converts markdown to docx with template styling, then uploads to Google Drive. Use when you want to publish markdown content to Google Docs with consistent branding.
 
+### scientific-eda
+
+Location: `skills/scientific-eda/`
+
+Defensive exploratory data analysis for scientific data (CSV, FASTA, etc.). Context-first, human-guided; one plot at a time, ask why before executing, co-authored lab notebook per analysis, scripts with uv run, WebP plots. Supports marimo notebooks and Rmarkdown. Use when opening data files for EDA or when the user wants guided scientific data exploration.
+
 ## Adding new skills
 
 Create a new directory under `skills/` with a `SKILL.md` file:
@@ -97,12 +103,19 @@ The `name` field must match the directory name (lowercase with hyphens).
 
 ## Installing these skills
 
-To install skills from this repository, you need either `uv` or `npm`:
+To install all skills from this repository, you need either `uv` or `npm`:
 
 | Method | Command |
 |--------|---------|
-| uv | `uvx deno -A npm:skills add ericmjl/skills` |
-| npm | `npx skills add ericmjl/skills` |
+| uv | `uvx deno -A npm:skills add apsteinberg/skills` |
+| npm | `npx skills add apsteinberg/skills` |
+
+To install a single skill (e.g. `scientific-eda`):
+
+| Method | Command |
+|--------|---------|
+| uv | `uvx deno -A npm:skills add apsteinberg/skills/scientific-eda` |
+| npm | `npx skills add apsteinberg/skills/scientific-eda` |
 
 ## Using these skills
 
