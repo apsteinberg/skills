@@ -103,19 +103,16 @@ The `name` field must match the directory name (lowercase with hyphens).
 
 ## Installing these skills
 
-To install all skills from this repository, you need either `uv` or `npm`:
+To install all skills from this repository globally, you need either `uv` or `npm`:
 
 | Method | Command |
 |--------|---------|
-| uv | `uvx deno -A npm:skills add apsteinberg/skills` |
-| npm | `npx skills add apsteinberg/skills` |
+| uv | `uvx deno -A npm:skills add apsteinberg/skills --global` |
+| npm | `npx skills add apsteinberg/skills --global` |
 
-To install a single skill (e.g. `scientific-eda`):
+This installs to `~/.agents/skills/` and symlinks to `~/.claude/skills/` for Claude Code.
 
-| Method | Command |
-|--------|---------|
-| uv | `uvx deno -A npm:skills add apsteinberg/skills/scientific-eda` |
-| npm | `npx skills add apsteinberg/skills/scientific-eda` |
+> **Note:** Individual skill installation (e.g. `npx skills add apsteinberg/skills/scientific-eda`) is not yet supported by the `skills` CLI. For now, install all skills and use the ones you need.
 
 ## Using these skills
 
