@@ -4,15 +4,15 @@ Each analysis is one folder under `analyses/` (or project-agreed base).
 
 **Naming convention:**
 
-- On creation, use a single date: **`[YYMMDD]_[optional_ID]_descriptive-slug`**, e.g. `260120_APS052_somatic_sv_exploration`.
-- When work resumes on a later day, the folder name gains a second date showing the original start date: **`[YYMMDD_last]-[YYMMDD_start]_...`**, e.g. `260315-260120_APS052_somatic_sv_exploration`. This keeps active analyses sorted to the top of the directory while preserving when the analysis started.
-- When resuming work, the agent should **suggest** this rename but **not do it automatically**. The user decides whether to rename.
+- On creation, use a single date: **`[YYMMDD]_[optional_ID]_descriptive-slug`**, e.g. `260315_SV-APS-052_somatic_sv_exploration` or `260315_protein_binding_eda`.
+- The date is the **creation date** and never changes, even when work resumes on a later day. Do not rename folders on resume.
+- The optional ID follows the format **`PROJ-INITIALS-NNN`**: a 1–4 letter uppercase project code, analyst initials (default `APS`), and a page number. Example: `SV-APS-052`, `BIND-APS-003`.
 
 **Canonical layout:**
 
 ```text
 analyses/
-  260315-260120_APS052_somatic_sv_exploration/
+  260315_SV-APS-052_somatic_sv_exploration/
     lab_notebook.md          # co-authored; goals, methods, results, conclusions
     plots/                   # WebP figures only
     scripts/                 # disposable scripts; uv run

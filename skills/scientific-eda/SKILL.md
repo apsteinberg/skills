@@ -37,9 +37,15 @@ Use this skill when the user provides one or more data files (CSV, FASTA, or oth
 
 ### Phase 2: Start an analysis
 
-- Create **one analysis folder** under `analyses/` (or a project-agreed base). Name it **`[YYMMDD]_[optional_ID]_descriptive-slug`** on creation, e.g. `analyses/260315_APS052_somatic_sv_exploration/` or `analyses/260315_protein_binding_eda/`. Use a single date (today) when the analysis is first created.
-- **Updating the date when resuming**: When work resumes on a later day, the folder name gains a second date showing the original start date: **`[YYMMDD_last]-[YYMMDD_start]_...`**, e.g. `260320-260315_APS052_somatic_sv_exploration/`. The agent should **suggest** this rename when resuming work but **not do it automatically**. The user decides whether to rename. This keeps active analyses sorted to the top of the directory while preserving the start date.
-- The ID prefix (e.g. `APS052`) is optional and used when the project tracks analyses by notebook page IDs or similar identifiers.
+- Create **one analysis folder** under `analyses/` (or a project-agreed base). Name it **`[YYMMDD]_[optional_ID]_descriptive-slug`** on creation. The date is the **creation date** and never changes, even when work resumes on a later day.
+  - Example with ID: `analyses/260315_SV-APS-052_somatic_sv_exploration/`
+  - Example without ID: `analyses/260315_protein_binding_eda/`
+- **Optional notebook ID**: The ID follows the format **`PROJ-INITIALS-NNN`** where:
+  - `PROJ` is a 1–4 letter uppercase project code (e.g. `SV`, `BIND`, `PROT`)
+  - `INITIALS` identifies the analyst (default: `APS`; other users should set their own)
+  - `NNN` is a page number, assigned by the user (eyeball the next available number)
+  - The ID is **optional** — analyses without a notebook page ID simply omit it from the folder name.
+- **Do not rename folders** when resuming work. The creation date is permanent. Use `ls -lt` or git log to see recent activity.
 - **Canonical layout** for each analysis folder:
   - `lab_notebook.md` – co-authored lab notebook for this analysis
   - `plots/` – all figures (WebP only for matplotlib)
@@ -112,6 +118,10 @@ When the user conducts EDA in an **Rmarkdown notebook** (`.Rmd` file), it lives 
 - Rmarkdown notebooks should state the **Goal** and **Background** at the top of the document.
 - Plots from Rmarkdown can be saved to `plots/` but this is not strictly required since `knitr` embeds figures in the HTML output.
 - The `lab_notebook.md` should still reference what was done in the Rmd and key findings.
+
+### "Just one more thing ..."
+
+When the agent has additional clarifying or follow-up questions during an analysis — especially after the user thinks they've finished explaining — lead with **"Just one more thing ..."** (an homage to Lt. Columbo). This applies to follow-up questions in any phase, not just context capture.
 
 ## Guardrails
 
