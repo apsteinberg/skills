@@ -107,6 +107,7 @@ The analysis folder supports multiple notebook formats at its root:
 
 When the user conducts EDA in a **marimo notebook** (`.py` file), it lives at the analysis folder root. Follow the same phases above (context first, one step, lab notebook, ask why). In addition:
 
+- **Cell ordering**: The **first cell** contains all package imports. The **second cell** (after the analysis goal markdown) defines all paths and key variables.
 - **Markdown before and after code**: For each code cell, add **markdown cells before and after** that explain what the code does and what the results mean. The markdown before sets up intent; the markdown after summarizes or interprets the output.
 
 See [references/marimo-notebook-eda.md](references/marimo-notebook-eda.md) for the canonical convention.
