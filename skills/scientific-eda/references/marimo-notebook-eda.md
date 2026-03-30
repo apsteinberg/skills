@@ -14,6 +14,15 @@ analyses/260315-260120_APS052_somatic_sv_exploration/
   sv_haplotypes.py          # marimo notebook
 ```
 
+## Cell ordering convention
+
+Marimo notebooks follow a consistent cell ordering at the top of the notebook:
+
+1. **First cell: all package imports.** Every `import` statement goes here. When a new dependency is needed later, add it to this cell rather than importing inline elsewhere.
+2. **Second cell (after the analysis goal markdown): paths and variables.** Define all file paths, directory locations, and key configuration variables in one place. This makes it easy to adapt the notebook to different data without hunting through cells.
+
+This mirrors the convention used in Rmarkdown notebooks (packages block, then paths block) and keeps the notebook's dependencies and data sources immediately visible at the top.
+
 ## Markdown around code cells
 
 Every code cell in the marimo notebook must have markdown that explains it:

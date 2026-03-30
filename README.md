@@ -114,6 +114,12 @@ This installs to `~/.agents/skills/` and symlinks to `~/.claude/skills/` for Cla
 
 > **Note:** Individual skill installation (e.g. `npx skills add apsteinberg/skills/scientific-eda`) is not yet supported by the `skills` CLI. For now, install all skills and use the ones you need.
 
+**Installing from a specific branch** (e.g. to test in-progress changes):
+
+```sh
+npx skills add https://github.com/apsteinberg/skills/tree/<branch> --global
+```
+
 ## Using these skills
 
 These skills are compatible with:
